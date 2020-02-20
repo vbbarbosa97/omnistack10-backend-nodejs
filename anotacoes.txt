@@ -1,0 +1,9 @@
+1 - yarn init -y // inicia o projeto
+2 - yarn add express // biblioteca para trabalhar com o backend
+3 - yanr add  nodemon -D // observa as modificações e reestarta o server
+4 - yarn add mongoose // biblioteca que permite acessar o banco de dados do mongo
+5 - yarn add axios // trabalha com chamadas para  API
+6 - yarn add sucrase -D // permite utilizar a nomeclatura atual de import e export
+//criar o arquivo nodemon.json para o nodemon executar sucrase-node em todos arquivos JS
+
+parei no 1h e 5 min dia 19/02

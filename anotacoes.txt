@@ -6,4 +6,5 @@
 6 - yarn add sucrase -D // permite utilizar a nomeclatura atual de import e export
 //criar o arquivo nodemon.json para o nodemon executar sucrase-node em todos arquivos JS
 7 - yarn add cors //libera o acesso a API
+8 - yarn add dotenv // trabalha com as variaveis
 parei no 1h e 5 min dia 19/02

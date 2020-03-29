@@ -1,6 +1,7 @@
 import apiGitHub from '../services/apiGitHub';
 import parseStringAsArray from '../util/parseStringAsArray';
 import Dev from '../models/Dev';
+import {findConnection,sendMenssage} from '../websocket';
 
 class DevController {   
     
@@ -43,6 +44,18 @@ class DevController {
             techs: techsArray,
             location,
         });
+
+        /*Filra se o dev que acabou de ser cadastrado esta em um raio de 
+            10km e tem as tecnologias que o cliente pesquisou, se sim manda 
+            para o cliente atraves do socket
+        */
+       const sendSocketMenssageTo = findConnection(
+        {latitude, longitude},
+        techsArray
+       );
+
+       //envia para os clientes conectados pelo socket o dev que foi cadastrado
+       sendMenssage(sendSocketMenssageTo, 'newDev', dev);
         
         return res.json(dev);
     }

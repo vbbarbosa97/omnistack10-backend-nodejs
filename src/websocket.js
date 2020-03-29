@@ -12,7 +12,7 @@ function setupWebsocket(server){
 
     io.on('connection', socket => {
         //recebendo os dados que são passados pelo cliente, pelo socket
-        const { latitude, logintude, techs } = socket.handshake.query;
+        const { latitude, longitude, techs } = socket.handshake.query;
 
         //inserindo os dados da conexão que foi feita pelo cliente no vetor
         connections.push({
